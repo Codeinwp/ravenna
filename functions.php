@@ -48,7 +48,7 @@ function ravenna_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size('ravenna-large-thumb', 700);
 	add_image_size('ravenna-small-thumb', 350,250,true);
-	
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -125,7 +125,7 @@ function ravenna_widgets_init() {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
-	}	
+	}
 
 	//Register widgets
 	register_widget( 'Ravenna_Services' );
@@ -151,25 +151,25 @@ function ravenna_scripts() {
 	wp_enqueue_style( 'ravenna-style', get_stylesheet_uri() );
 
 	if ( get_theme_mod('body_font_name') !='' ) {
-	    wp_enqueue_style( 'ravenna-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) ); 
+	    wp_enqueue_style( 'ravenna-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_name')) );
 	} else {
 	    wp_enqueue_style( 'ravenna-body-fonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 	}
 
 	if ( get_theme_mod('headings_font_name') !='' ) {
-	    wp_enqueue_style( 'ravenna-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) ); 
+	    wp_enqueue_style( 'ravenna-headings-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('headings_font_name')) );
 	} else {
-	    wp_enqueue_style( 'ravenna-headings-fonts', '//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700'); 
+	    wp_enqueue_style( 'ravenna-headings-fonts', '//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700');
 	}
 
-	wp_enqueue_style( 'ravenna-fontawesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );	
+	wp_enqueue_style( 'ravenna-fontawesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
 
 	wp_enqueue_script( 'ravenna-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	wp_enqueue_script( 'ravenna-parallax', get_template_directory_uri() . '/js/main.js', array('jquery'),'', true );
 
 	wp_enqueue_script( 'ravenna-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),'', true );
@@ -210,21 +210,21 @@ function ravenna_header_boxes() {
 	echo 	'<span class="header-icon"><i class="fa ' . esc_html($box_icon_1) . '"></i></span>';
 	}
 	echo 	'<h3 class="header-title">' . esc_html(get_theme_mod('box_title_1', 'Solid construction')) . '</h3>';
-	echo 	'<div class="header-text">' . wp_kses_post(get_theme_mod('box_text_1', 'Try it and see for yourself. You will be amazed.')) . '</div>';	
+	echo 	'<div class="header-text">' . wp_kses_post(get_theme_mod('box_text_1', 'Try it and see for yourself. You will be amazed.')) . '</div>';
 	echo '</div>';
 	echo '<div class="header-block">';
 	if ($box_icon_2) {
 	echo 	'<span class="header-icon"><i class="fa ' . esc_html($box_icon_2) . '"></i></span>';
 	}
 	echo 	'<h3 class="header-title">' . esc_html(get_theme_mod('box_title_2', 'Built with love')) . '</h3>';
-	echo 	'<div class="header-text">' . wp_kses_post(get_theme_mod('box_text_2', 'Countless hours of work and passion went into this.')) . '</div>';	
+	echo 	'<div class="header-text">' . wp_kses_post(get_theme_mod('box_text_2', 'Countless hours of work and passion went into this.')) . '</div>';
 	echo '</div>';
 	echo '<div class="header-block">';
 	if ($box_icon_3) {
 	echo 	'<span class="header-icon"><i class="fa ' . esc_html($box_icon_3) . '"></i></span>';
 	}
 	echo 	'<h3 class="header-title">' . esc_html(get_theme_mod('box_title_3', 'Responsive design')) . '</h3>';
-	echo 	'<div class="header-text">' . wp_kses_post(get_theme_mod('box_text_3', 'Looks great on any device, no matter the size.')) . '</div>';	
+	echo 	'<div class="header-text">' . wp_kses_post(get_theme_mod('box_text_3', 'Looks great on any device, no matter the size.')) . '</div>';
 	echo '</div>';
 }
 endif;
@@ -266,7 +266,7 @@ add_action( 'ravenna_footer', 'ravenna_footer_credits' );
 if ( ! function_exists( 'ravenna_branding' ) ) :
 function ravenna_branding() {
 	if ( get_theme_mod('site_logo') ) :
-		echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr(get_bloginfo('name')) . '"><img class="site-logo" src="' . esc_url(get_theme_mod('site_logo')) . '" alt="' . esc_attr(get_bloginfo('name')) . '" /></a>'; 
+		echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr(get_bloginfo('name')) . '"><img class="site-logo" src="' . esc_url(get_theme_mod('site_logo')) . '" alt="' . esc_attr(get_bloginfo('name')) . '" /></a>';
 	else :
 		echo '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html(get_bloginfo('name')) . '</a></h1>';
 		if ( get_bloginfo( 'description' ) ) {
@@ -345,3 +345,65 @@ require get_template_directory() . '/inc/styles.php';
 require get_template_directory() . '/inc/widgets.php';
 
 
+/**
+ *TGM Plugin activation.
+ */
+require_once get_template_directory() . '/class-tgm-plugin-activation.php';
+
+/**
+ * TGMPA register
+ */
+function ravenna_register_required_plugins() {
+		$plugins = array(
+			array(
+				'name'      => 'WP Product Reviews',
+				'slug'      => 'wp-product-reviews',
+				'required'  => false,
+			),
+
+			array(
+				'name'      => 'Intergeo Maps - Google Maps Plugin',
+				'slug'      => 'intergeo-maps',
+				'required'  => false
+			),
+
+			array(
+				'name'     => 'Pirate Forms',
+				'slug' 	   => 'pirate-forms',
+				'required' => false
+			));
+
+	$config = array(
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,
+        'dismissable'  => true,
+        'dismiss_msg'  => '',
+        'is_automatic' => false,
+        'message'      => '',
+        'strings'      => array(
+            'page_title'                      => esc_html__( 'Install Required Plugins', 'ravenna' ),
+            'menu_title'                      => esc_html__( 'Install Plugins', 'ravenna' ),
+            'installing'                      => esc_html__( 'Installing Plugin: %s', 'ravenna' ),
+            'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'ravenna' ),
+            'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'ravenna' ),
+            'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'ravenna' ),
+            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'ravenna' ),
+            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'ravenna' ),
+            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'ravenna' ),
+            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'ravenna' ),
+            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'ravenna' ),
+            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'ravenna' ),
+            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'ravenna' ),
+            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'ravenna' ),
+            'return'                          => esc_html__( 'Return to Required Plugins Installer', 'ravenna' ),
+            'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'ravenna' ),
+            'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'ravenna' ),
+            'nag_type'                        => 'updated'
+        )
+    );
+
+	tgmpa( $plugins, $config );
+
+}
+add_action( 'tgmpa_register', 'ravenna_register_required_plugins' );
