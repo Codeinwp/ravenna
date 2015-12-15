@@ -45,7 +45,7 @@ function ravenna_customize_register( $wp_customize ) {
 
     $c = 0;
     foreach($pages as $page){
-    
+
         $id = $page->post_id;
         $widget_count = ravenna_count_widgets($id);
 
@@ -62,7 +62,7 @@ function ravenna_customize_register( $wp_customize ) {
             $wp_customize->add_setting('ravenna_options[info]', array(
                     'type'              => 'info_control',
                     'capability'        => 'edit_theme_options',
-                    'sanitize_callback' => 'esc_attr',            
+                    'sanitize_callback' => 'esc_attr',
                 )
             );
             $wp_customize->add_control( new Ravenna_Info( $wp_customize, 'layout' . $c . $i, array(
@@ -110,8 +110,8 @@ function ravenna_customize_register( $wp_customize ) {
                         'priority'      => 10
                     )
                 )
-            );         
-            //Background image   
+            );
+            //Background image
             $wp_customize->add_setting(
                 'section_image_' . $id . '_' . $i,
                 array(
@@ -138,7 +138,7 @@ function ravenna_customize_register( $wp_customize ) {
                 array(
                     'sanitize_callback' => 'absint',
                     'default'           => '100',
-                )       
+                )
             );
             $wp_customize->add_control( 'section_tp_' . $id . '_' . $i, array(
                 'type'        => 'number',
@@ -159,7 +159,7 @@ function ravenna_customize_register( $wp_customize ) {
                 array(
                     'sanitize_callback' => 'absint',
                     'default'           => '100',
-                )       
+                )
             );
             $wp_customize->add_control( 'section_bp_' . $id . '_' . $i, array(
                 'type'        => 'number',
@@ -180,7 +180,7 @@ function ravenna_customize_register( $wp_customize ) {
                 array(
                     'sanitize_callback' => 'absint',
                     'default'           => '1170',
-                )       
+                )
             );
             $wp_customize->add_control( 'section_mw_' . $id . '_' . $i, array(
                 'type'        => 'number',
@@ -194,13 +194,13 @@ function ravenna_customize_register( $wp_customize ) {
                     'step'  => 5,
                     'style' => 'margin-bottom: 15px; padding: 15px;',
                 ),
-            ) );            
+            ) );
             //Full width
             $wp_customize->add_setting(
                 'section_fw_' . $id . '_' . $i,
                 array(
                     'sanitize_callback' => 'ravenna_sanitize_checkbox',
-                )       
+                )
             );
             $wp_customize->add_control(
                 'section_fw_' . $id . '_' . $i,
@@ -217,7 +217,7 @@ function ravenna_customize_register( $wp_customize ) {
                 'section_center_' . $id . '_' . $i,
                 array(
                     'sanitize_callback' => 'ravenna_sanitize_checkbox',
-                )       
+                )
             );
             $wp_customize->add_control(
                 'section_center_' . $id . '_' . $i,
@@ -229,8 +229,8 @@ function ravenna_customize_register( $wp_customize ) {
                     'priority'  => 10,
                 )
             );
-        } 
-    $c++; 
+        }
+    $c++;
     }
 
     //___General___//
@@ -257,7 +257,7 @@ function ravenna_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 11
         )
-    );    
+    );
     //___Header area___//
     $wp_customize->add_panel( 'ravenna_header_panel', array(
         'priority'       => 10,
@@ -313,7 +313,7 @@ function ravenna_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 10
         )
-    );    
+    );
     $wp_customize->add_setting(
         'box_title_1',
         array(
@@ -362,7 +362,7 @@ function ravenna_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 10
         )
-    );       
+    );
     $wp_customize->add_setting(
         'box_title_2',
         array(
@@ -411,7 +411,7 @@ function ravenna_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 10
         )
-    );     
+    );
     $wp_customize->add_setting(
         'box_title_3',
         array(
@@ -450,7 +450,7 @@ function ravenna_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '240',
-        )       
+        )
     );
     $wp_customize->add_control( 'header_top_padding', array(
         'type'        => 'number',
@@ -471,7 +471,7 @@ function ravenna_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '170',
-        )       
+        )
     );
     $wp_customize->add_control( 'header_bottom_padding', array(
         'type'        => 'number',
@@ -491,7 +491,7 @@ function ravenna_customize_register( $wp_customize ) {
         'header_box_mobile',
         array(
             'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'header_box_mobile',
@@ -511,12 +511,12 @@ function ravenna_customize_register( $wp_customize ) {
             'title' => __('Blog options', 'ravenna'),
             'priority' => 13,
         )
-    );  
+    );
     // Blog layout
     $wp_customize->add_setting('ravenna_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Ravenna_Info( $wp_customize, 'layout', array(
@@ -525,7 +525,7 @@ function ravenna_customize_register( $wp_customize ) {
         'settings' => 'ravenna_options[info]',
         'priority' => 10
         ) )
-    );    
+    );
     $wp_customize->add_setting(
         'blog_layout',
         array(
@@ -545,13 +545,13 @@ function ravenna_customize_register( $wp_customize ) {
                 'fullwidth'   => __( 'Full width (no sidebar)', 'ravenna' ),
             ),
         )
-    ); 
+    );
     //Full width singles
     $wp_customize->add_setting(
         'fullwidth_single',
         array(
             'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'fullwidth_single',
@@ -566,7 +566,7 @@ function ravenna_customize_register( $wp_customize ) {
     $wp_customize->add_setting('ravenna_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Ravenna_Info( $wp_customize, 'content', array(
@@ -575,14 +575,14 @@ function ravenna_customize_register( $wp_customize ) {
         'settings' => 'ravenna_options[info]',
         'priority' => 13
         ) )
-    );          
+    );
     //Full content posts
     $wp_customize->add_setting(
       'full_content_home',
       array(
         'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
         'full_content_home',
@@ -597,8 +597,8 @@ function ravenna_customize_register( $wp_customize ) {
       'full_content_archives',
       array(
         'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
         'full_content_archives',
@@ -608,14 +608,14 @@ function ravenna_customize_register( $wp_customize ) {
             'section' => 'blog_options',
             'priority' => 15,
         )
-    );    
+    );
     //Excerpt
     $wp_customize->add_setting(
         'exc_lenght',
         array(
             'sanitize_callback' => 'absint',
             'default'           => '55',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_lenght', array(
         'type'        => 'number',
@@ -634,7 +634,7 @@ function ravenna_customize_register( $wp_customize ) {
     $wp_customize->add_setting('ravenna_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Ravenna_Info( $wp_customize, 'meta', array(
@@ -643,14 +643,14 @@ function ravenna_customize_register( $wp_customize ) {
         'settings' => 'ravenna_options[info]',
         'priority' => 17
         ) )
-    ); 
+    );
     //Hide meta index
     $wp_customize->add_setting(
       'hide_meta_index',
       array(
         'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_meta_index',
@@ -666,8 +666,8 @@ function ravenna_customize_register( $wp_customize ) {
       'hide_meta_single',
       array(
         'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_meta_single',
@@ -682,7 +682,7 @@ function ravenna_customize_register( $wp_customize ) {
     $wp_customize->add_setting('ravenna_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Ravenna_Info( $wp_customize, 'images', array(
@@ -691,13 +691,13 @@ function ravenna_customize_register( $wp_customize ) {
         'settings' => 'ravenna_options[info]',
         'priority' => 21
         ) )
-    );     
+    );
     //Index images
     $wp_customize->add_setting(
         'index_feat_image',
         array(
             'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'index_feat_image',
@@ -713,7 +713,7 @@ function ravenna_customize_register( $wp_customize ) {
         'post_feat_image',
         array(
             'sanitize_callback' => 'ravenna_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'post_feat_image',
@@ -767,7 +767,7 @@ function ravenna_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 12
         )
-    );   
+    );
     //Headings fonts
     $wp_customize->add_setting(
         'headings_font_name',
@@ -809,7 +809,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '15',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_desc_size', array(
         'type'        => 'number',
@@ -822,7 +822,7 @@ function ravenna_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) );         
+    ) );
     //H1 size
     $wp_customize->add_setting(
         'h1_size',
@@ -830,7 +830,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '36',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h1_size', array(
         'type'        => 'number',
@@ -851,7 +851,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '30',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h2_size', array(
         'type'        => 'number',
@@ -872,7 +872,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '24',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h3_size', array(
         'type'        => 'number',
@@ -893,7 +893,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '18',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h4_size', array(
         'type'        => 'number',
@@ -914,7 +914,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h5_size', array(
         'type'        => 'number',
@@ -935,7 +935,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '12',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h6_size', array(
         'type'        => 'number',
@@ -956,7 +956,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
@@ -977,7 +977,7 @@ function ravenna_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '40',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'section_titles', array(
         'type'        => 'number',
@@ -1031,7 +1031,7 @@ function ravenna_customize_register( $wp_customize ) {
                 'priority'      => 12
             )
         )
-    );	
+    );
 
     //Site title
     $wp_customize->add_setting(
@@ -1094,7 +1094,7 @@ function ravenna_customize_register( $wp_customize ) {
                 'priority' => 22
             )
         )
-    ); 
+    );
 
     //___Footer___//
     $wp_customize->add_section(
@@ -1166,3 +1166,14 @@ function ravenna_customize_preview_js() {
 	wp_enqueue_script( 'ravenna_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'ravenna_customize_preview_js' );
+
+function ravenna_registers() {
+	wp_enqueue_script( 'ravenna_customizer_script', get_template_directory_uri() . '/js/ravenna_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_localize_script( 'ravenna_customizer_script', 'ravennaCustomizerObject', array(
+		'github'				=> __('GitHub','ravenna'),
+		'review'				=> __('Leave a Review', 'ravenna'),
+		'documentation'	=> __('Documentation', 'ravenna')
+		) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'ravenna_registers' );
