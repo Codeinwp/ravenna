@@ -256,7 +256,7 @@ function ravenna_footer_credits() {
 		printf( __( 'Proudly powered by %s', 'ravenna' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
-	printf( esc_html__( 'Theme: %2$s by %1$s.', 'ravenna' ), 'FlyFreeMedia', '<a href="http://flyfreemedia.com/themes/ravenna" rel="designer">Ravenna</a>' );
+	printf( esc_html__( 'Theme: %2$s by %1$s.', 'ravenna' ), 'JustFreeThemes', '<a href="http://justfreethemes.com/ravenna" rel="nofollow">Ravenna</a>' );
 }
 add_action( 'ravenna_footer', 'ravenna_footer_credits' );
 
