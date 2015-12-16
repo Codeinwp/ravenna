@@ -252,7 +252,7 @@ add_filter( 'get_the_archive_title', 'ravenna_archive_prefix' );
  * Footer credits
  */
 function ravenna_footer_credits() {
-	echo '<a href="' . esc_url( __( 'http://wordpress.org/', 'ravenna' ) ) . '">';
+	echo '<a href="' . esc_url( __( 'http://wordpress.org/', 'ravenna' ) ) . '" rel="nofollow">';
 		printf( __( 'Proudly powered by %s', 'ravenna' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
