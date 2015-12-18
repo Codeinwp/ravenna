@@ -1,8 +1,8 @@
 /*
 Theme Name: Ravenna
-Theme URI: http://flyfreemedia.com/themes/ravenna
-Author: FlyFreeMedia
-Author URI: http://flyfreemedia.com
+Theme URI: http://justfreethemes.com/ravenna
+Author: JustFreeThemes
+Author URI: http://justfreethemes.com
 Description: Ravenna is an light and extremely easy to use business theme. The theme provides all that is needed to get a quick start on your website and can be easily expanded with your favourite plugins so you can quickly get the functionality you need. Among the options you will find color control for most of the elements, font control, custom widgets and much more.
 Version: 1.02
 License: GNU General Public License v2 or later
@@ -370,7 +370,7 @@ a:active {
 	display: block;
 	text-decoration: none;
 	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;	
+	transition: opacity 0.3s;
 }
 .comment-navigation a:hover,
 .posts-navigation a:hover,
@@ -541,10 +541,10 @@ a:active {
 }
 .service-icon .fa {
     position: relative;
-    z-index: 11;	
+    z-index: 11;
 	-webkit-transform: rotatez(-45deg);
 	-ms-transform: rotatez(-45deg);
-	transform: rotatez(-45deg);	
+	transform: rotatez(-45deg);
 	text-shadow: 0 0 1px #444;
 }
 .service-desc,
@@ -578,7 +578,7 @@ a:active {
 }
 .call-to-action.aside-style {
 	display: flex;
-	align-items: center;	
+	align-items: center;
 }
 .action-button {
 	display: table;
@@ -590,7 +590,7 @@ a:active {
 	margin: 0;
 }
 .aside-style .action-button {
-	margin: 0 0 0 30px; 
+	margin: 0 0 0 30px;
 }
 h3.action-text {
 	font-size: 24px;
@@ -612,7 +612,7 @@ ul.social-menu-widget {
 .social-menu-widget a {
 	color: #fff;
 	-webkit-transition: color 0.4s;
-	transition: color 0.4s;	
+	transition: color 0.4s;
 }
 .social-menu-widget li {
 	display: inline-block;
@@ -818,7 +818,7 @@ ul.social-menu-widget {
 .entry-footer {
 	margin-top: 20px;
 	border-top: 1px solid #ebebeb;
-	padding-top: 15px;	
+	padding-top: 15px;
 }
 .entry-meta,
 .entry-meta a,
@@ -908,7 +908,7 @@ ul.social-menu-widget {
 	background-color: #fff;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 a.comment-reply-link {
 	text-decoration: none;
@@ -1092,8 +1092,8 @@ img {
 	position: relative;
 	background-attachment: fixed;
 	background-position: center;
-	background-size: cover;	
-	background-repeat: no-repeat;	
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .site-content {
 	margin-top: 60px;
@@ -1131,7 +1131,7 @@ img {
 .header-info .container {
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;	
+    display: flex;
 }
 .header-block {
 	display: inline-block;
@@ -1154,7 +1154,7 @@ img {
 	height: 60px;
 	border-radius: 50%;
 	line-height: 60px;
-	background-color: #488FE4; 
+	background-color: #488FE4;
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
@@ -1204,8 +1204,8 @@ img {
     margin-left: -100px;
     margin-top: -100px;
     text-align: center;
-    padding-top: 80px;   
-	font-family: 'Open Sans Condensed', sans-serif;     
+    padding-top: 80px;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 /*--------------------------------------------------------------
 ## Responsive
@@ -1219,7 +1219,7 @@ img {
 @media only screen and (max-width: 1024px) {
 	.main-navigation {
 		display: none;
-	}	
+	}
 	.mobile-nav {
 		display: block;
 	}
@@ -1236,13 +1236,13 @@ img {
 	.parallax {
 		background-attachment: scroll;
 		background-position: center !important;
-	}	
+	}
 }
 @media only screen and (max-width: 991px) {
 	.content-area,
 	.widget-area {
 		width: 100%;
-	}	
+	}
 	.header-info .container {
 		display: none;
 		padding: 0;
@@ -1315,7 +1315,7 @@ img {
 	.home-block .widget-title,
 	h1 {
 		font-size: 26px !important;
-	}	
+	}
 	h2 {
 		font-size: 22px !important;
 	}
@@ -1328,5 +1328,5 @@ img {
     }
     .aside-style .action-button {
         margin-left: 12px;
-    }	
+    }
 }
